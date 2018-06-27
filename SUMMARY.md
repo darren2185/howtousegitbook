@@ -6,12 +6,12 @@
 * [Python数据结构与算法](pythonshu-ju-jie-gou-yu-suan-fa.md)
   * [1.顺序表](pythonshu-ju-jie-gou-yu-suan-fa/shun-xu-biao.md)
   * [2.栈](pythonshu-ju-jie-gou-yu-suan-fa/zhan.md)
-  * 3.队列
-  * 4.列表
+  * [3.队列](pythonshu-ju-jie-gou-yu-suan-fa/3dui-lie.md)
+  * [4.列表](pythonshu-ju-jie-gou-yu-suan-fa/4lie-biao.md)
   * [5.排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu.md)
-    * 1.冒泡排序
-    * 2.选择排序
-    * 3.插入排序
+    * [1.冒泡排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/1mao-pao-pai-xu.md)
+    * [2.选择排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/2xuan-ze-pai-xu.md)
+    * [3.插入排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/3cha-ru-pai-xu.md)
     * 4.希尔排序
     * 5.快速排序
     * 6.归并排序
