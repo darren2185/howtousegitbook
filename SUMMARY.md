@@ -12,8 +12,8 @@
     * [1.冒泡排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/1mao-pao-pai-xu.md)
     * [2.选择排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/2xuan-ze-pai-xu.md)
     * [3.插入排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/3cha-ru-pai-xu.md)
-    * 4.希尔排序
-    * 5.快速排序
+    * [4.希尔排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/4xi-er-pai-xu.md)
+    * [5.快速排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/5kuai-su-pai-xu.md)
     * 6.归并排序
   * [6.查找](pythonshu-ju-jie-gou-yu-suan-fa/6cha-zhao.md)
   * [7.二叉树](pythonshu-ju-jie-gou-yu-suan-fa/7er-cha-shu.md)
