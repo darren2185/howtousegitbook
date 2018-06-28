@@ -1,8 +1,10 @@
 # 学习之道，习且远之
 
-> This file file serves as your book's preface, a great place to describe your book's content and ideas.
+> #####  本文有浓烈的个人偏好，每个语言都有各自的特点，选择适合自己的就好。
 
-> ### sdfsdfsdfsdfsfsafafafaffds
+## 前言
+
+这么多年来，本人也学过或者说接触过不少计算机语言，大学期间VB,、C/C++，C\#，JavaScript等，也做过一些项目
 
 
 
