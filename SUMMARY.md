@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [Python简介](README.md)
 * [Python基础](chapter1.md)
 * [Python进阶](pythonjin-jie.md)
 * [Python数据结构与算法](pythonshu-ju-jie-gou-yu-suan-fa.md)
@@ -14,7 +14,7 @@
     * [3.插入排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/3cha-ru-pai-xu.md)
     * [4.希尔排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/4xi-er-pai-xu.md)
     * [5.快速排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/5kuai-su-pai-xu.md)
-    * 6.归并排序
+    * [6.归并排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/6gui-bing-pai-xu.md)
   * [6.查找](pythonshu-ju-jie-gou-yu-suan-fa/6cha-zhao.md)
   * [7.二叉树](pythonshu-ju-jie-gou-yu-suan-fa/7er-cha-shu.md)
   * [8.图论](chapter1.md)
