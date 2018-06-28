@@ -12,41 +12,49 @@
 
 ![](/images/IMG1.jpg)
 
-####     1. Python方便灵活
+#### 1. Python方便灵活
 
-####     2. Python库丰富
+#### 2. Python库丰富
 
-         可以说我在了解Python各种库上花费了很多时间，有时间应该整理一个表格分类列出来有用的工具包。至少在矢量数据方面，有GDAL，GeoPandas，Leafet，Rasterio，Fiona；在栅格数据方面，通用的图像处理有OpenCV， Scikit-Image，用于遥感图像的有Spectral-Python。更重要的是，如果想涉足机器学习，Python更有从较通用的Scikit-Learn到深度学习的Tensorflow、Keras等一大票工具包等着你。
+     可以说我在了解Python各种库上花费了很多时间，有时间应该整理一个表格分类列出来有用的工具包。至少在矢量数据方面，有GDAL，GeoPandas，Leafet，Rasterio，Fiona；在栅格数据方面，通用的图像处理有OpenCV， Scikit-Image，用于遥感图像的有Spectral-Python。更重要的是，如果想涉足机器学习，Python更有从较通用的Scikit-Learn到深度学习的Tensorflow、Keras等一大票工具包等着你。
 
-####     3. Python资源多 {#test}
+#### 3. Python资源多 {#test}
 
-          在此是指由问题基本都能在StackOverFlow等找到解决方法，也有很多相关书籍。
+      在此是指由问题基本都能在StackOverFlow等找到解决方法，也有很多相关书籍。
 
-####     4. 代码共享方便
+#### 4. 代码共享方便
 
-####     5. Python“上手快"
+#### 5. Python“上手快"
 
 ## Python能做什么
 
 对GIS和遥感数据来说，Python能做的事情，那简直是不要太多。
 
-####   1. 数据读取和处理
+#### 1. 数据读取和处理
 
-####   2. 脚本  
+#### 2. 脚本
 
-      ArcGIS，ENVI等商业软件都可以用Python做脚本语言，QGIS，SNAP和EnMAP等开源工具也用到了它。
+```
+  ArcGIS，ENVI等商业软件都可以用Python做脚本语言，QGIS，SNAP和EnMAP等开源工具也用到了它。
+```
 
-####   3. 机器学习
+#### 3. 机器学习
 
-     更时髦的词，可以用地理空间智能，时空大数据等等。
+```
+ 更时髦的词，可以用地理空间智能，时空大数据等等。
+```
 
-####   4. Web开发
+#### 4. Web开发
 
-     GeoDjango
+```
+ GeoDjango
+```
 
-####   5. 桌面开发
+#### 5. 桌面开发
 
-    Python结合Tkniter和PyQt，也能胜任，但没啥优势可言。不过，貌似除了三维、VR/AR，普通的桌面开发也开始颓废，被WEB和移动端占据。
+```
+Python结合Tkniter和PyQt，也能胜任，但没啥优势可言。不过，貌似除了三维、VR/AR，普通的桌面开发也开始颓废，被WEB和移动端占据。
+```
 
 ## 总结
 
