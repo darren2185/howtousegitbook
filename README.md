@@ -16,11 +16,15 @@
 
 #### 2. Python库丰富
 
-     可以说我在了解Python各种库上花费了很多时间，有时间应该整理一个表格分类列出来有用的工具包。至少在矢量数据方面，有GDAL，GeoPandas，Leafet，Rasterio，Fiona；在栅格数据方面，通用的图像处理有OpenCV， Scikit-Image，用于遥感图像的有Spectral-Python。更重要的是，如果想涉足机器学习，Python更有从较通用的Scikit-Learn到深度学习的Tensorflow、Keras等一大票工具包等着你。
+```markdown
+ 可以说我在了解Python各种库上花费了很多时间，有时间应该整理一个表格分类列出来有用的工具包。至少在矢量数据方面，有GDAL，GeoPandas，Leafet，Rasterio，Fiona；在栅格数据方面，通用的图像处理有OpenCV， Scikit-Image，用于遥感图像的有Spectral-Python。更重要的是，如果想涉足机器学习，Python更有从较通用的Scikit-Learn到深度学习的Tensorflow、Keras等一大票工具包等着你。
+```
 
 #### 3. Python资源多 {#test}
 
-      在此是指由问题基本都能在StackOverFlow等找到解决方法，也有很多相关书籍。
+```
+  在此是指由问题基本都能在StackOverFlow等找到解决方法，也有很多相关书籍。
+```
 
 #### 4. 代码共享方便
 
