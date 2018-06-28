@@ -14,35 +14,41 @@
 
 #### 1. Python方便灵活
 
+Python在一定程度上能够解决依赖特定的平台，带来的不便。毕竟那些对工具依赖性强的工作，你的价值越依附于工具，你越是要警惕自己的思考能力被工具剥夺。
+
 #### 2. Python库丰富
 
- 可以说我在了解Python各种库上花费了很多时间，有时间应该整理一个表格分类列出来有用的工具包。至少在矢量数据方面，有GDAL，GeoPandas，Leafet，Rasterio，Fiona；在栅格数据方面，通用的图像处理有OpenCV， Scikit-Image，用于遥感图像的有Spectral-Python。更重要的是，如果想涉足机器学习，Python更有从较通用的Scikit-Learn到深度学习的Tensorflow、Keras等一大票工具包等着你。
+可以说我在了解Python各种库上花费了很多时间，有时间应该整理一个表格分类列出来有用的工具包。至少在矢量数据方面，有GDAL，GeoPandas，Leafet，Rasterio，Fiona；在栅格数据方面，通用的图像处理有OpenCV， Scikit-Image，用于遥感图像的有Spectral-Python。更重要的是，如果想涉足机器学习，Python更有从较通用的Scikit-Learn到深度学习的Tensorflow、Keras等一大票工具包等着你。
 
 #### 3. Python资源多 {#test}
 
-  在此是指由问题基本都能在StackOverFlow等找到解决方法，也有很多相关书籍。
+在此是指由问题基本都能在StackOverFlow等找到解决方法，也有很多相关书籍。
 
 #### 4. 代码共享方便
 
+特指Juypter Notebook的.ipynb文件，文字说明，代码，图在一个文件里面，微软和Anaconda也提偶刚了在线运行环境，申请账号就能直接运行代码。
+
 #### 5. Python“上手快"
+
+Python语言本身粘性，且比较接近实际生活的语言来描述程序，容易维护。
 
 ## Python能做什么
 
-对GIS和遥感数据来说，Python能做的事情，那简直是不要太多。
+ Python适合作为一般性程序编写和系统整合，尤其是在科学和教育领域中。语法整洁，对电脑图形很好的支援，也有十分快的数学阵列模组，很容易把其他的程式整合在一起，比如以前写的c程式，只要修改很小的部分就可以编译成python可用的模组。
 
 #### 1. 数据读取和处理
 
 #### 2. 脚本
 
-  ArcGIS，ENVI等商业软件都可以用Python做脚本语言，QGIS，SNAP和EnMAP等开源工具也用到了它。
+ArcGIS，ENVI等商业软件都可以用Python做脚本语言，QGIS，SNAP和EnMAP等开源工具也用到了它。
 
 #### 3. 机器学习
 
- 更时髦的词，可以用地理空间智能，时空大数据等等。
+更时髦的词，可以用地理空间智能，时空大数据等等。
 
 #### 4. Web开发
 
- GeoDjango
+GeoDjango
 
 #### 5. 桌面开发
 
