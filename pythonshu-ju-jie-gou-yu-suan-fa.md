@@ -6,7 +6,7 @@
 
 ## dgfdgd3
 
-### dfgfdggf \(http://www.baidu.com\)
+### dfgfdggf \[headlink\][http://www.baidu.com\](http://www.baidu.com\)
 
 
 
