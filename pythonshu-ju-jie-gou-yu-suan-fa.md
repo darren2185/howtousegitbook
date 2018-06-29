@@ -14,7 +14,13 @@
 
 @pando
 
+!\[\]\([https://pandao.github.io/editor.md/examples/images/4.jpg\](https://pandao.github.io/editor.md/examples/images/4.jpg\)
+
+-\[x\]
 
 
-!\[\]\(https://pandao.github.io/editor.md/examples/images/4.jpg\)
+
+
+
+
 
