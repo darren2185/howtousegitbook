@@ -18,4 +18,5 @@
   * [6.查找](pythonshu-ju-jie-gou-yu-suan-fa/6cha-zhao.md)
   * [7.二叉树](pythonshu-ju-jie-gou-yu-suan-fa/7er-cha-shu.md)
   * [8.图论](chapter1.md)
+* [Python Library Language Reference](python-language-reference.md)
 
