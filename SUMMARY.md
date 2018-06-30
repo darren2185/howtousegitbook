@@ -1,6 +1,7 @@
 # Summary
 
 * [Python简介](README.md)
+  * [学习心得](xue-xi-xin-de.md)
 * [Python基础](chapter1.md)
 * [Python进阶](pythonjin-jie.md)
 * [Python数据结构与算法](pythonshu-ju-jie-gou-yu-suan-fa.md)
