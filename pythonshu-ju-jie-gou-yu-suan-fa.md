@@ -2,6 +2,8 @@
 
 ---
 
+算法\(Algorithm\)是实际生活中某类问题而概括出的解决问题方法，
+
 # fdgfdgf
 
 ## dgfdgd3
@@ -13,8 +15,6 @@
 ```
 \[普通链接\]\([http://localhost/\](http://localhost/%29\)
 ```
-
-
 
 @pando
 
