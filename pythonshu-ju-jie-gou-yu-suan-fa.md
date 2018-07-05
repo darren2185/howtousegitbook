@@ -74,48 +74,48 @@ class Rational:
             if m == 0:
                 return n        
             m, n = n % m, m 
-            
+
     def __init__(self, num, dec=1):
         if not isinstance(num, int) or not isinstance(dec, int):
             raise TypeError
-        
+
         if dec == 0:
             raise ZeroDivisionError
-        
+
         sign = 1
-        
+
         if num < 0 or dec < 0:
             sign = -sign
-        
+
         if num < 0 and dec < 0:
             sign = -sign
-        
+
         num, dec = abs(num), abs(dec)
         g = self._gcd(num, dec)
-        
+
         self._num = sign * (num // g)
         self._dec = dec // g
-             
+
     def __add__(self, other):
         return Rational(self._num * other._dec + self._dec * other._num, self._dec * other._dec)
-    
+
     def __mul__(self, other):
         return Rational(self._num * other._num, self._dec * other._dec)
-    
+
     def __sub__(self, other):
         return Rational(self._num * other._dec - self._dec * other._num, self._dec * other._dec)
-    
-    
+
+
     def __repr__(self):
         return "{0} / {1}".format(self._num, self._dec)
-    
+
     def __str__(self):
         return "{0} / {1}".format(self._num, self._dec)
 
 
 r1 = Rational(-16, 32)
 r2 = Rational(4, 7)
-r1 + r2
+r1 + r2       # 1/14
 ```
 
 动态约束确定调用关系的函数称为虚函数
