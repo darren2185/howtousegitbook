@@ -62,5 +62,24 @@ AD是一种思想，也是一种组织程序的技术，主要包括：
 
 一个类定义确定了一个名字空间，位于类体里面的定义局限于类体，且局部名字在该类之外不能直接看到，不会与外部的名字冲突。
 
+动态约束确定调用关系的函数称为虚函数
+
+```py
+class B:
+    def f(self):
+        self.g()
+    def g(self):
+        print("B.g Called")
+
+class C(B):
+    def g(self):
+        print('C.g Called')
+
+x = B()
+x.g()    # B.g Called
+y = C()
+y.f()    # C.g Called  当y是C的实例，当y调用f函数时，本身的self指的是当前y，所以self.g()也是调用当前y下的函数
+```
+
 
 
