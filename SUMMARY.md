@@ -5,7 +5,7 @@
 * [Python基础](chapter1.md)
 * [Python进阶](pythonjin-jie.md)
 * [Python数据结构与算法](pythonshu-ju-jie-gou-yu-suan-fa.md)
-  * [1.线性表]](pythonshu-ju-jie-gou-yu-suan-fa/1xian-xing-88685d.md)
+  * [1.线性表](pythonshu-ju-jie-gou-yu-suan-fa/1xian-xing-88685d.md)
   * [2.栈](pythonshu-ju-jie-gou-yu-suan-fa/zhan.md)
   * [3.队列](pythonshu-ju-jie-gou-yu-suan-fa/3dui-lie.md)
   * [4.列表](pythonshu-ju-jie-gou-yu-suan-fa/4lie-biao.md)
