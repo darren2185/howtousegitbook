@@ -129,7 +129,7 @@ def gcd_o(m, n=1):
         if m == 0:
             return n        
         m, n = n % m, m
-        
+
 
 def gcd_or(m, n=1):
     # 辗转相除法 -- 递归
@@ -152,8 +152,6 @@ def gcd_j(m, n=1):
             m, n = n - m, m
         else:
             m, n = m, n - m
-        
-        # (m, n) = (n - m, m) if m > n -m else (m, n - m)
 
 
 def gcd_jr(m, n=1):
@@ -165,9 +163,6 @@ def gcd_jr(m, n=1):
 
 
 print(gcd_jr(32, 1024))
-
-
-
 ```
 
 动态约束确定调用关系的函数称为虚函数
