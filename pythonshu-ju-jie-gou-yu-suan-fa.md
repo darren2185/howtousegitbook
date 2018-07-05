@@ -62,6 +62,62 @@ AD是一种思想，也是一种组织程序的技术，主要包括：
 
 一个类定义确定了一个名字空间，位于类体里面的定义局限于类体，且局部名字在该类之外不能直接看到，不会与外部的名字冲突。
 
+实例：有理数数据类型
+
+```py
+class Rational:
+    @staticmethod
+    def _gcd(m, n=1):
+        if n == 0:
+            raise ZeroDivisionError("错误：分子为零")
+        while True:
+            if m == 0:
+                return n        
+            m, n = n % m, m 
+            
+    def __init__(self, num, dec=1):
+        if not isinstance(num, int) or not isinstance(dec, int):
+            raise TypeError
+        
+        if dec == 0:
+            raise ZeroDivisionError
+        
+        sign = 1
+        
+        if num < 0 or dec < 0:
+            sign = -sign
+        
+        if num < 0 and dec < 0:
+            sign = -sign
+        
+        num, dec = abs(num), abs(dec)
+        g = self._gcd(num, dec)
+        
+        self._num = sign * (num // g)
+        self._dec = dec // g
+             
+    def __add__(self, other):
+        return Rational(self._num * other._dec + self._dec * other._num, self._dec * other._dec)
+    
+    def __mul__(self, other):
+        return Rational(self._num * other._num, self._dec * other._dec)
+    
+    def __sub__(self, other):
+        return Rational(self._num * other._dec - self._dec * other._num, self._dec * other._dec)
+    
+    
+    def __repr__(self):
+        return "{0} / {1}".format(self._num, self._dec)
+    
+    def __str__(self):
+        return "{0} / {1}".format(self._num, self._dec)
+
+
+r1 = Rational(-16, 32)
+r2 = Rational(4, 7)
+r1 + r2
+```
+
 动态约束确定调用关系的函数称为虚函数
 
 ```py
