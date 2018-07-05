@@ -118,6 +118,58 @@ r2 = Rational(4, 7)
 r1 + r2       # 1/14
 ```
 
+如何求最大公约数的问题
+
+```py
+# 辗转相除法 -- 循环
+def gcd_o(m, n=1):
+    if n == 0:
+        raise ZeroDivisionError("错误：分子为零")
+    while True:
+        if m == 0:
+            return n        
+        m, n = n % m, m
+        
+
+def gcd_or(m, n=1):
+    # 辗转相除法 -- 递归
+    if n == 0:
+        raise ZeroDivisionError("错误：分子为零")
+    if n % m == 0:
+        return m
+    return gcd_o(n % m, m)
+
+
+print(gcd_or(144, 256))
+
+
+def gcd_j(m, n=1):
+    # 更相减损术（等值方法）
+    while True:
+        if m == n - m:
+            return m
+        if m > n - m:
+            m, n = n - m, m
+        else:
+            m, n = m, n - m
+        
+        # (m, n) = (n - m, m) if m > n -m else (m, n - m)
+
+
+def gcd_jr(m, n=1):
+    if n == 0:
+        raise ZeroDivisionError("错误：分子为零")
+    if m == n - m:
+        return m
+    return gcd_jr(*((n - m, m) if m > n - m else (m, n - m)))
+
+
+print(gcd_jr(32, 1024))
+
+
+
+```
+
 动态约束确定调用关系的函数称为虚函数
 
 ```py
