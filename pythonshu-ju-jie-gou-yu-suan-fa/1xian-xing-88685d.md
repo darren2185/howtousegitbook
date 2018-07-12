@@ -90,7 +90,7 @@ ADT List:                           # 一个线性表抽象数据类型
 
 #### 实现：
 
-
+![](/assets/shuxubiaoandlianbiao.PNG)
 
 
 
