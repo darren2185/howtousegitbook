@@ -92,3 +92,99 @@ ADT List:                           # 一个线性表抽象数据类型
 
 ![](/assets/shuxubiaoandlianbiao.PNG)
 
+#### 1.简单顺序列表
+
+```py
+class SimpleSequenceList:
+    """简单顺序表
+       实现以下功能：
+       _num                     记录有多少个元素，即长度
+       is_empty(self)           判断是否为空
+       length --- property      属性长度, 只读属性
+       append(elem)             末端添加
+       pop()                    删除前端元素
+       prepend(elem)            前端添加
+       pop_last()               删除末端元素
+       insert(i, elem)          根据位置i添加元素
+       """
+    def __init__(self, *args):
+        self._num = 0
+        self._container = []
+
+        if len(args) != 0:
+            self._container += args
+
+    @property
+    def length(self):
+        return len(self._container)
+
+    def is_empty(self):
+        return len(self._container) == 0
+
+    def append(self, elem):
+        self._container.append(elem)
+        self._num += 1
+
+    def prepend(self, elem):
+        # 1
+        # 不保序前端加入
+        # if self.is_empty():
+        #     self._container.append(elem)
+        # else:
+        #     self._container.append(elem)
+        #     self._container[0], self._container[len(self._container) - 1] = self._container[len(self._container) - 1], self._container[0]
+        #
+        # 2 保序前端插入
+        if self.is_empty():
+            self._container.append(elem)
+        else:
+            self._container.append(elem)
+            p = elem
+            for i in range(len(self._container)-1, 0, -1):
+                self._container[i] = self._container[i - 1]
+
+            self._container[0] = p
+
+    def __repr__(self):
+        s = ""
+        for i in self._container:
+            s += str(i)+", "
+        return s
+
+    def travel(self):
+        for i in range(self.length):
+            print(self._container[i], end=" ")
+        print(" ")
+
+    def pop(self):
+        if self.is_empty():
+            raise ValueError('此表目前为空表')
+
+        return self._container.pop(0)
+
+    def pop_last(self):
+        if self.is_empty():
+            raise ValueError('此表目前为空表')
+
+        return self._container.pop(len(self._container) - 1)
+
+    def insert(self, index, elem):
+
+        if self.is_empty():
+            self._container.append(elem)
+            return
+
+        if 0 < index < self.length:
+            self._container.append(elem)
+            for i in range(self.length-1, index, -1):
+                self._container[i] = self._container[i - 1]
+
+            self._container[index] = elem
+        elif index >= self.length:
+            self._container.append(elem)
+        else:
+            self.prepend(elem)
+```
+
+
+
