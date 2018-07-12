@@ -132,7 +132,8 @@ class SimpleSequenceList:
         #     self._container.append(elem)
         # else:
         #     self._container.append(elem)
-        #     self._container[0], self._container[len(self._container) - 1] = self._container[len(self._container) - 1], self._container[0]
+        #     self._container[0], self._container[len(self._container) - 1] = \
+                   self._container[len(self._container) - 1], self._container[0]
         #
         # 2 保序前端插入
         if self.is_empty():
