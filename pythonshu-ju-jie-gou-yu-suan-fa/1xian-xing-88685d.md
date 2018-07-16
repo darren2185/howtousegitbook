@@ -187,5 +187,163 @@ class SimpleSequenceList:
             self.prepend(elem)
 ```
 
+#### 简单单链表
+
+```py
+class SingleNode:
+    """
+    结点定义:
+    elem      Property
+    next_node Property
+    """
+    def __init__(self, elem=None):
+        self.__elem = elem
+        self.__next = None
+
+    @property
+    def elem(self):
+        return self.__elem
+
+    @elem.setter
+    def elem(self, elem):
+        self.__elem = elem
+
+    @property
+    def next_node(self):
+        return self.__next
+
+    @next_node.setter
+    def next_node(self, node=None):
+        self.__next = node
+
+
+class SingleLinkList:
+    """实现单链表
+       is_empty                判断是否为空
+       length                  property 链表长度
+       travel                  遍历链表
+       prepend                 首端添加结点
+       append                  末端添加结点
+       insert                  指定位置插入
+       remove(item)            删除结点,指定元素
+       search(item)            查找含有item的节点
+    """
+    def __init__(self, node=None):
+        self._head = node
+
+    def is_empty(self):
+        """链表是否为空"""
+        return self._head is None
+
+    def length(self):
+        """链表节点数量"""
+        # _cur表示当前游标
+        _cur = self._head
+
+        # _count表示计数器
+        _count = 0
+
+        while _cur:
+            _count += 1
+            _cur = _cur.next_node
+
+        return _count
+
+    def __len__(self):   # 使用len(object)函数获取长度
+        return self.length()
+
+    def travel(self):
+        """遍历单链表"""
+        # _cur表示当前游标
+        _cur = self._head
+
+        while _cur:
+            print(_cur.elem, end=' ')
+            _cur = _cur.next_node
+        print(" ")
+
+    def __str__(self):
+        """返回所有元素字符串"""
+        _l = []
+        _cur = self._head
+
+        while _cur is not None:
+            _l.append(str(_cur.elem))
+            _cur = _cur.next_node
+
+        return ", ".join(_l)
+
+    def prepend(self, item):
+        """首端增加节点"""
+        node = SingleNode(item)
+        if self.is_empty():
+            self._head = node
+        else:
+            node.next_node, self._head = self._head, node
+
+    def append(self, item):
+        """尾端增加节点"""
+        node = SingleNode(item)
+
+        if self.is_empty():
+            self._head = node
+        else:
+            _cur = self._head
+            while _cur.next_node:
+                _cur = _cur.next_node
+            _cur.next_node = node
+
+    def insert(self, pos, item):
+        """插入某个节点位置，如果pos值大于length则在尾部添加，如果小于等于0则首端操作
+           其余则正常处理
+           :param pos  从0开始
+           :param item 节点元素
+           """
+        node = SingleNode(item)
+        _count = 0
+
+        if self.is_empty() or pos <= 0:
+            self.prepend(item)
+
+        elif pos > self.length() - 1:
+            self.append(item)
+
+        else:
+            _cur = self._head
+
+            while _count < pos - 1:
+                _count += 1
+                _cur = _cur.next_node
+
+            node.next_node, _cur.next_node = _cur.next_node, node
+
+    def remove(self, item):
+        """删除数据，使用两个指针，_cur表示当前指针，_pre则表示当前节点的上一节点，
+           这样处理便于删除当前节后，前后两节点链接_pre.next_node = _cur.next_node"""
+        _pre = _cur = self._head
+        while _cur:
+            if _cur.elem == item:
+                if self._head == _cur:
+                    self._head = _cur.next_node
+                else:
+                    _pre.next_node = _cur.next_node
+                break
+            else:
+                _pre, _cur = _cur, _cur.next_node
+
+    def search(self, item):
+        """查找节点元素"""
+        _cur = self._head
+        while _cur:
+            if _cur.elem == item:
+                return True
+            else:
+                _cur = _cur.next_node
+        return False
+
+    def __contains__(self, item):
+        return self.search(item)
+```
+
 
 
