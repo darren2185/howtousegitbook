@@ -294,6 +294,7 @@ class SingleLinkList:
             _cur.next_node = node
 
     def insert(self, pos, item):
+    
         """插入某个节点位置，如果pos值大于length则在尾部添加，如果小于等于0则首端操作
            其余则正常处理
            :param pos  从0开始
@@ -318,6 +319,7 @@ class SingleLinkList:
             node.next_node, _cur.next_node = _cur.next_node, node
 
     def remove(self, item):
+    
         """删除数据，使用两个指针，_cur表示当前指针，_pre则表示当前节点的上一节点，
            这样处理便于删除当前节后，前后两节点链接_pre.next_node = _cur.next_node"""
         _pre = _cur = self._head
