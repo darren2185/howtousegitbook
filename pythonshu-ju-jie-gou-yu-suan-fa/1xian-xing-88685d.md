@@ -347,5 +347,130 @@ class SingleLinkList:
         return self.search(item)
 ```
 
+#### 带尾指针的单链表
+
+```py
+class SimpleSingleLinkWith:
+    """带尾指针的单链表，self._rear->最后节点，便于尾端插入、删除"""
+    def __init__(self, node=None):
+        self._rear = self._head = node
+
+    def _length(self):
+        _cur = self._head
+        _count = 0
+        while _cur:
+            _count += 1
+            _cur = _cur.next_node
+        return _count
+
+    def __len__(self):
+        """返回链表长度"""
+        return self._length()
+
+    @property
+    def is_empty(self):
+        """判断列表是否为空"""
+        return self._head is None
+
+    def prepend(self, item):
+        """首端添加结点"""
+        node = SingleNode(item)
+        if self.is_empty:
+            self._head = self._rear = node
+        else:
+            self._head, node.next_node = node, self._head
+
+    def append(self, item):
+        """尾端添加结点"""
+        node = SingleNode(item)
+        if self.is_empty:
+            self._head = self._rear = node
+        else:
+            self._rear.next_node, self._rear = node, node
+
+    def insert(self, pos, item):
+        """插入某个节点位置，如果pos值大于length则在尾部添加，如果小于等于0则首端操作
+           其余则正常处理
+           :param pos  从0开始
+           :param item 节点元素
+           """
+        if pos <= 0:
+            self.prepend(item)
+        elif pos > self._length() - 1:
+            self.append(item)
+        else:
+            node = SingleNode(item)
+            _cur = self._head
+
+            _count = 0
+            while _count < pos - 1:
+                _count += 0
+                _cur = _cur.next_node
+            node.next_node, _cur.next_node = _cur.next_node, node
+
+    def pop_first(self):
+        """删除头结点"""
+        if self.is_empty:
+            return None
+        else:
+            elem = self._head.elem
+            self._head = self._head.next_node
+            return elem
+
+    def pop_last(self):
+        """删除尾结点，同时需要考虑如何使尾结点前移的操作，找到尾结点的上一节点_cur.next_node == self._rear"""
+        if self._rear is None:
+            return None
+        else:
+            elem = self._rear.elem
+            _cur = self._head
+
+            while _cur.next_node is not self._rear:
+                _cur = _cur.next_node
+
+            self._rear = _cur
+            return elem
+
+    def remove(self, item):
+        """删除含有item的节点,需要注意两个特殊位置（首端节点、尾端节点）"""
+        _pre = _cur = self._head
+        while _cur:
+            if _cur.elem == item:
+                if self._head == _cur:
+                    self._head = _cur.next_node
+                elif self._rear == _cur:
+                    self._rear, _pre.next_node = _pre, self._rear.next_node
+                else:
+                    _pre.next_node = _cur.next_node
+                break
+            else:
+                _cur, _pre = _cur.next_node, _cur
+
+    def search(self, item):
+        """查找含有item的节点,如有则TRUE，否则FALSE"""
+        _cur = self._head
+        while _cur:
+            if _cur.elem == item:
+                return True
+            else:
+                _cur = _cur.next_node
+
+        return False
+
+    def __contains__(self, item):
+        return self.search(item)
+
+    def __str__(self):
+        """返回所有元素字符串"""
+        _l = []
+        _cur = self._head
+
+        while _cur is not None:
+            _l.append(str(_cur.elem))
+            _cur = _cur.next_node
+
+        return ", ".join(_l)
+```
+
 
 
