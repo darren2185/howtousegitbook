@@ -474,15 +474,124 @@ class SimpleSingleLinkWith:
 
 #### 单向循环链表
 
+```py
+class SingleLinkCircle:
+    """单向循环列表"""
+    def __init__(self, node=None):
+        """判断node，如果为None,则初始化self._head=None,否则node.next_node指向自己，构成闭环"""
+        self._head = self._rear = node
+        if node is not None:
+            node.next_node = node
 
+    def _is_empty(self):
+        """首节点为空，则为空"""
+        return self._head is None
 
+    def _length(self):
+        """需要注意当节点为1个时候，如何去判断，其余的判端条件_cur is not self._head"""
+        _cur = self._head
+        _count = 0
+        if self._head is None:
+            return _count
+        elif _cur.next_node == _cur:
+            _count += 1
+        else:
+            while _cur is not self._rear:
+                _count += 1
+                _cur = _cur.next_node
 
+            if _cur.next_node is self._head:
+                _count += 1
+        return _count
+
+    def __len__(self):
+        return self._length()
+
+    def prepend(self, item):
+        node = Node(item)
+
+        if self._is_empty():
+            self._head = self._rear = node
+            node.next_node = node
+        else:
+            node.next_node, self._head, self._rear.next_node = self._head, node, node
+
+    def append(self, item):
+        node = Node(item)
+
+        if self._is_empty():
+            self._head = self._rear = node
+            node.next_node = node
+        else:
+            node.next_node, self._rear.next_node, self._rear = self._rear.next_node, node, node
+
+    def insert(self, pos, item):
+        node = Node(item)
+
+        if pos <= 0:
+            self.prepend(item)
+        elif pos > self._length() - 1:
+            self.append(item)
+        else:
+            _cur = self._head
+            _count = 0
+
+            while _count < pos - 1:
+                _count += 1
+                _cur = _cur.next_node
+
+            node.next_node, _cur.next_node = _cur.next_node, node
+
+    def remove(self, item):
+        """删除特定item元素的结点"""
+        _pre = _cur = self._head
+
+        while _cur and _cur is not self._rear:
+            if _cur.elem == item:
+                if _cur == self._head:
+                    if _cur.next_node == _cur:
+                        self._head = self._rear = None
+                    else:
+                        self._head = _cur.next_node
+                        self._rear.next_node = _cur.next_node
+                    break
+                else:
+                    _pre.next_node = _cur.next_node
+                break
+            else:
+                _pre = _cur
+                _cur = _cur.next_node
+
+        if _cur.next_node is self._rear and _cur.next_node.elem == item:
+            _pre.next_node, self._rear = self._rear.next_node, _pre
+
+    def __str__(self):
+        _l = []
+        _cur = self._head
+
+        while _cur is not self._rear:
+            _l.append(str(_cur.elem))
+            _cur = _cur.next_node
+        if _cur.next_node == self._head:
+            _l.append(str(_cur.elem))
+
+        return ", ".join(_l)
+
+    def __contains__(self, item):
+        _cur = self._head
+
+        while _cur is not self._rear:
+            if _cur.elem == item:
+                return True
+            _cur = _cur.next_node
+
+        if _cur is self._rear and _cur.elem == item:
+            return True
+
+        return False
+```
 
 #### 双向循环链表
 
 此处忽略双向链表，其操作功能与循环列表类似，仅尾部判断条件有区别。
-
-
-
-
 
