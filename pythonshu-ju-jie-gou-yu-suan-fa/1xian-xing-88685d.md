@@ -748,5 +748,3 @@ class DoubleLinkCircle:
 
 
 
-
-
