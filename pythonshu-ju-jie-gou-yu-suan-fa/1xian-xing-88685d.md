@@ -194,7 +194,6 @@ class SimpleSequenceList:
                 if self._container[i] < self._container[i - 1]:
                     self._container[i], self._container[i - 1] = self._container[i - 1], self._container[i]
         print(self._container)
-
 ```
 
 #### 简单单链表
@@ -378,7 +377,7 @@ class SingleLinkList:
                     _pre.elem, _cur.elem = _cur.elem, _pre.elem
                 else:
                     _pre = _pre.next_node
-            _cur = _cur.next_node        
+            _cur = _cur.next_node
 ```
 
 #### 带尾指针的单链表
@@ -744,6 +743,10 @@ class DoubleLinkCircle:
 
         _cur.next_node = _cur.pre_node = None
 ```
+
+#### 约瑟夫问题算法
+
+
 
 
 
