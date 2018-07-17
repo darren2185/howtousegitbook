@@ -215,7 +215,18 @@ class SingleNode:
     @next_node.setter
     def next_node(self, node=None):
         self.__next = node
+class Node(SingleNode):
+    def __init__(self, elem=None, prenode=None, nextnode=None):
+        self._pre_node = prenode
+        super(Node, self).__init__(elem, nextnode)
 
+    @property
+    def pre_node(self):
+        return self._pre_node
+
+    @pre_node.setter
+    def pre_node(self, node):
+        self._pre_node = node
 
 class SingleLinkList:
     """实现单链表
