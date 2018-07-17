@@ -595,3 +595,121 @@ class SingleLinkCircle:
 
 此处忽略双向链表，其操作功能与循环列表类似，仅尾部判断条件有区别。
 
+```py
+class DoubleLinkCircle:
+    """ 双向循环列表， 每个结点有后指针并含有前指针，首端结点的pre_node指向尾结点，末端结点的next_node指向首结点"""
+    def __init__(self, node=None):
+        self._head = node
+
+    def is_empty(self):
+        """判断是否为空"""
+        return self._head is None
+
+    def __str__(self):
+        _l = []
+        if self.is_empty():
+            return None
+        else:
+            _cur = self._head.next_node
+            _l.append(str(self._head.elem))
+
+            while _cur is not self._head:
+                _l.append(str(_cur.elem))
+                _cur = _cur.next_node
+
+        return ", ".join(_l)
+
+    def prepend(self, item):
+        """头部添加节点"""
+        node = Node(item)
+        if self.is_empty():
+            self._head = node
+            node.pre_node, node.next_node = node, node
+        else:
+            node.next_node, node.pre_node = self._head, self._head.pre_node
+            self._head.pre_node.next_node, self._head.pre_node = node, node
+            self._head = node
+
+    def append(self, item):
+        """尾部添加节点"""
+        node = Node(item)
+
+        if self.is_empty():
+            self._head = node
+            node.pre_node, node.next_node = node, node
+        else:
+            node.next_node, node.pre_node, self._head.pre_node.next_node, \
+                self._head.pre_node = self._head, self._head.pre_node, node, node
+
+    def insert(self, pos, item):
+        """从中间pos位置中，添加节点"""
+        if pos <= 0:
+            self.prepend(item)
+        elif pos > len(self) - 1:
+            self.append(item)
+        else:
+            _cur = self._head
+            _count = 0
+            while _count < pos - 1:
+                _cur = _cur.next_node
+                _count += 1
+
+            node = Node(item)
+            node.next_node, node.pre_node, _cur.pre_node.next_node, \
+                _cur.pre_node = _cur, _cur.pre_node, node, node
+
+    def __len__(self):
+        if self.is_empty():
+            return 0
+        else:
+            _count = 1
+            _cur = self._head.next_node
+
+            while _cur is not self._head:
+                _count += 1
+                _cur = _cur.next_node
+
+            return _count
+
+    def __contains__(self, item):
+        """判断是否含有item，有则True, 无则False"""
+        _cur = self._head
+
+        while _cur and _cur.next_node is not self._head:
+            if _cur.elem == item:
+                return True
+            else:
+                _cur = _cur.next_node
+
+        if _cur.next_node is self._head and _cur.elem == item:
+            return True
+
+        return False
+
+    def remove(self, item):
+        """删除含有元素item结点, 无需借助另外的_pre来寻找上一个节点"""
+        _cur = self._head
+
+        while _cur and _cur.next_node is not self._head:
+            if _cur.elem == item:
+                if _cur == self._head:
+                    _cur.pre_node.next_node = self._head.next_node
+                    _cur.next_node.pre_node = self._head.pre_node
+                    self._head = _cur.next_node
+                else:
+                    _cur.pre_node.next_node = _cur.next_node
+                    _cur.next_node.pre_node = _cur.pre_node
+
+                break
+            else:
+                _cur = _cur.next_node
+
+        if _cur.next_node == self._head:
+            _cur.pre_node.next_node = self._head
+            self._head.pre_node = _cur.pre_node
+
+        _cur.next_node = _cur.pre_node = None
+```
+
+
+
