@@ -185,6 +185,16 @@ class SimpleSequenceList:
             self._container.append(elem)
         else:
             self.prepend(elem)
+
+    def sort(self):
+        n = len(self._container)
+        # 快速排序法实现升序
+        for j in range(n):
+            for i in range(j, 0, -1):
+                if self._container[i] < self._container[i - 1]:
+                    self._container[i], self._container[i - 1] = self._container[i - 1], self._container[i]
+        print(self._container)
+
 ```
 
 #### 简单单链表
@@ -215,7 +225,7 @@ class SingleNode:
     @next_node.setter
     def next_node(self, node=None):
         self.__next = node
-    
+
 class Node(SingleNode):
     def __init__(self, elem=None, prenode=None, nextnode=None):
         self._pre_node = prenode
@@ -357,6 +367,18 @@ class SingleLinkList:
 
     def __contains__(self, item):
         return self.search(item)
+
+    def sort(self):
+        """插入排序法实现节点排序"""
+        _cur = self._head
+        while _cur:
+            _pre = self._head
+            while _pre is not _cur:
+                if _pre.elem > _cur.elem:
+                    _pre.elem, _cur.elem = _cur.elem, _pre.elem
+                else:
+                    _pre = _pre.next_node
+            _cur = _cur.next_node        
 ```
 
 #### 带尾指针的单链表
