@@ -215,6 +215,7 @@ class SingleNode:
     @next_node.setter
     def next_node(self, node=None):
         self.__next = node
+    
 class Node(SingleNode):
     def __init__(self, elem=None, prenode=None, nextnode=None):
         self._pre_node = prenode
