@@ -46,19 +46,19 @@ ADT String:
 
 2. 主串S第二位开始，主串S首字母为o，模式串T的首字母为g，匹配失败，如图所示：
 
-     ![](/assets/4.2.png)
+   ![](/assets/4.2.png)
 
    3.主串S第三位开始，主串S首字母为o，模式串T的首字母为g，匹配失败，如图所示：
 
-      ![](/assets/4.3.png)
+   ![](/assets/4.3.png)
 
    4.主串S第四位开始，主串S首字母为d，模式串T的首字母为g，匹配失败，如图所示：
 
-      ![](/assets/4.4.png)
+   ![](/assets/4.4.png)
 
    5.主串S第五位开始，S与T，6个字母全匹配，匹配成功，如图所示：
 
-    ![](/assets/4.5.png)
+   ![](/assets/4.5.png)
 
 ```py
 def naive_matching(t, p):
@@ -82,5 +82,7 @@ def naive_matching(t, p):
     return
 ```
 
+#### KMP算法
 
+KMP算法的基本想法是匹配中不回溯。如果匹配中用模式串里的pi匹配某个tj时失败了（遇到了pj &ne tj）
 
