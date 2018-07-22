@@ -84,5 +84,48 @@ def naive_matching(t, p):
 
 #### KMP算法
 
-KMP算法的基本想法是匹配中不回溯。如果匹配中用模式串里的pi匹配某个tj时失败了（遇到了pj ≠ tj的情况），就找到了某个特定的Ki\(0 &le Ki &lt i \)，下一步用模式串中的字符Pki与目标字符串里的Tj比较，在匹配失败时把模式串前移若干位置，用模式串里匹配失败字符之前的某个字符与目标串中匹配失败的字符比较。
+KMP算法的基本想法是匹配中不回溯。如果匹配中用模式串里的pi匹配某个tj时失败了（遇到了pj ≠ tj的情况），就找到了某个特定的Ki\(0 ≤ Ki &lt; i \)，下一步用模式串中的字符Pki与目标字符串里的Tj比较，在匹配失败时把模式串前移若干位置，用模式串里匹配失败字符之前的某个字符与目标串中匹配失败的字符比较。
+
+文本串S匹配到 i 位置，模式串P匹配到 j 位置
+
+* 如果j = -1，或者当前字符匹配成功（即S\[i\] == P\[j\]），都令i++，j++，继续匹配下一个字符；
+* 如果j != -1，且当前字符匹配失败（即S\[i\] != P\[j\]），则令 i 不变，j = next\[j\]。此举意味着失配时，模式串P相对于文本串S向右移动了j - next \[j\] 位。
+
+换言之，当匹配失败时，模式串向右移动的位数为：失配字符所在位置 - 失配字符对应的next 值（next 数组的求解会在下文的**移动的实际位数为：j - next\[j\]**，且此值大于等于1。
+
+```py
+def kmp(s, p):
+
+    def get_next(pat_str):
+        _n = len(pat_str)
+        prefix = -1
+        suffix = 0
+        _l = [-1] * _n
+        while suffix < _n - 1:
+            if prefix == -1 or pat_str[prefix] == pat_str[suffix]:
+                prefix, suffix = prefix + 1, suffix + 1
+                if pat_str[suffix] == pat_str[prefix]:
+                    _l[suffix] = _l[prefix]
+                else:
+                    _l[suffix] = prefix
+            else:
+                prefix = _l[prefix]
+
+        return _l
+
+    _next_list = get_next(p)
+    print(_next_list)
+    n, m = len(s), len(p)
+    i, j = 0, 0
+
+    while i < n and j < m:
+        if j == -1 or s[i] == p[j]:
+            i, j = i + 1, j + 1
+        else:
+            j = _next_list[j]
+        if j == m:
+            yield i
+```
+
+
 
