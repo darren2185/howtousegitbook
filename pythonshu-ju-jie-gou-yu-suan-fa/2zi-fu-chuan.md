@@ -97,14 +97,19 @@ KMP算法的基本想法是匹配中不回溯。如果匹配中用模式串里�
 def kmp(s, p):
 
     def get_next(pat_str):
+        """获取偏移数组"""
         _n = len(pat_str)
-        prefix = -1
-        suffix = 0
-        _l = [-1] * _n
+        prefix = -1     # 前缀指针， -1是标记符，当为-1时，则目标字符串后移一位
+        suffix = 0      # 后缀指针
+        _l = [-1] * _n  # 初始化数组
         while suffix < _n - 1:
-            if prefix == -1 or pat_str[prefix] == pat_str[suffix]:
+            # 当prefix为-1，或者prefix与suffix相等时后移一位。
+            if prefix == -1 or pat_str[prefix] == pat_str[suffix]:   
                 prefix, suffix = prefix + 1, suffix + 1
-                if pat_str[suffix] == pat_str[prefix]:
+                
+                # 如何实现快速跳转
+                # 当某个字符前后相等时，当模式字符串与目标字符不等时，则其前字符也不相等，直接跳到其前位置（字符不相等位置处）
+                if pat_str[suffix] == pat_str[prefix]:               
                     _l[suffix] = _l[prefix]
                 else:
                     _l[suffix] = prefix
@@ -112,19 +117,25 @@ def kmp(s, p):
                 prefix = _l[prefix]
 
         return _l
-
+    # 获取偏移数组  
     _next_list = get_next(p)
-    print(_next_list)
+    # print(_next_list)
+    # 获取模式字符串及目标字符串长度
     n, m = len(s), len(p)
     i, j = 0, 0
-
+    
     while i < n and j < m:
+        # 向后偏移的条件两个：1. j为-1,2. 目标字符串[i]与模式字符串[j]相等时
         if j == -1 or s[i] == p[j]:
             i, j = i + 1, j + 1
         else:
+            # 如果不满足，则从偏移数组中获取偏移模式串位置量    
             j = _next_list[j]
         if j == m:
-            yield i
+            # 迭代生成器
+            yield i - j
+            # 当某处已完全匹配后，跳转下一位置继续匹配。
+            j = 0
 ```
 
 
