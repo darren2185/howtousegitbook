@@ -13,5 +13,30 @@ ADT Stack:
     top(self)                    # 取得栈里最后压入的元素，不删除
 ```
 
+实现代码如下：
+
+```py
+class SStack:
+    def __init__(self):
+        self._elem = []
+
+    def is_empty(self):
+        return len(self._elem) == 0
+
+    def top(self):
+        if self.is_empty():
+            raise ValueError('Stack is empty!')
+        else:
+            return self._elem[-1]
+
+    def push(self, elem):
+        self._elem.append(elem)
+
+    def pop(self):
+        if self.is_empty():
+            raise ValueError('Stack is empty!')
+        return self._elem.pop()
+```
+
 
 
