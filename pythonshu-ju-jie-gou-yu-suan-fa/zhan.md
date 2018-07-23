@@ -38,5 +38,33 @@ class SStack:
         return self._elem.pop()
 ```
 
+线性链表实现栈
+
+```py
+class LStack:
+    def __init__(self):
+        self._top = None
+
+    def is_empty(self):
+        return self._top is None
+
+    def top(self):
+        if self.is_empty():
+            raise ValueError('The Stack is empty!')
+        return self._top.elem
+
+    def push(self, elem):
+        node = SingleNode(elem)
+        node.next_node, self._top = self._top, node
+
+    def pop(self):
+        if self.is_empty():
+            raise ValueError('The Stack is empty!')
+
+        node = self._top
+        self._top, node.next_node = self._top.next_node, None
+        return node.elem
+```
+
 
 
