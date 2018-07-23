@@ -7,6 +7,7 @@
 * [Python数据结构与算法](pythonshu-ju-jie-gou-yu-suan-fa.md)
   * [1.线性表](pythonshu-ju-jie-gou-yu-suan-fa/1xian-xing-88685d.md)
   * [2.字符串](pythonshu-ju-jie-gou-yu-suan-fa/2zi-fu-chuan.md)
+    * [练习代码](pythonshu-ju-jie-gou-yu-suan-fa/2zi-fu-chuan/lian-xi-dai-ma.md)
   * [3.栈和队列](pythonshu-ju-jie-gou-yu-suan-fa/zhan.md)
   * [4.列表](pythonshu-ju-jie-gou-yu-suan-fa/4lie-biao.md)
   * [5.排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu.md)
