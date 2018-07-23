@@ -106,7 +106,7 @@ def kmp(s, p):
             # 当prefix为-1，或者prefix与suffix相等时后移一位。
             if prefix == -1 or pat_str[prefix] == pat_str[suffix]:   
                 prefix, suffix = prefix + 1, suffix + 1
-                
+
                 # 如何实现快速跳转
                 # 当某个字符前后相等时，当模式字符串与目标字符不等时，则其前字符也不相等，直接跳到其前位置（字符不相等位置处）
                 if pat_str[suffix] == pat_str[prefix]:               
@@ -123,7 +123,7 @@ def kmp(s, p):
     # 获取模式字符串及目标字符串长度
     n, m = len(s), len(p)
     i, j = 0, 0
-    
+
     while i < n and j < m:
         # 向后偏移的条件两个：1. j为-1,2. 目标字符串[i]与模式字符串[j]相等时
         if j == -1 or s[i] == p[j]:
@@ -137,6 +137,10 @@ def kmp(s, p):
             # 当某处已完全匹配后，跳转下一位置继续匹配。
             j = 0
 ```
+
+#### Boyer Moore算法
+
+#### AC算法
 
 
 
