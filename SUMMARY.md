@@ -5,24 +5,29 @@
 * [Python基础](chapter1.md)
 * [Python进阶](pythonjin-jie.md)
 * [Python数据结构与算法](pythonshu-ju-jie-gou-yu-suan-fa.md)
+
   * [1.线性表](pythonshu-ju-jie-gou-yu-suan-fa/1xian-xing-88685d.md)
   * [2.字符串](pythonshu-ju-jie-gou-yu-suan-fa/2zi-fu-chuan.md)
     * [练习代码](pythonshu-ju-jie-gou-yu-suan-fa/2zi-fu-chuan/lian-xi-dai-ma.md)
   * [3.栈和队列](pythonshu-ju-jie-gou-yu-suan-fa/zhan.md)
-  * [4.列表](pythonshu-ju-jie-gou-yu-suan-fa/4lie-biao.md)
-  * [5.二叉树](/pythonshu-ju-jie-gou-yu-suan-fa/7er-cha-shu.md)
+
+  * [4.二叉树](//pythonshu-ju-jie-gou-yu-suan-fa/7er-cha-shu.md)
 
   * [5.排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu.md)
+
     * [1.冒泡排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/1mao-pao-pai-xu.md)
     * [2.选择排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/2xuan-ze-pai-xu.md)
     * [3.插入排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/3cha-ru-pai-xu.md)
     * [4.希尔排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/4xi-er-pai-xu.md)
     * [5.快速排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/5kuai-su-pai-xu.md)
     * [6.归并排序](pythonshu-ju-jie-gou-yu-suan-fa/5pai-xu/6gui-bing-pai-xu.md)
+
   * [6.查找](pythonshu-ju-jie-gou-yu-suan-fa/6cha-zhao.md)
 
   * [8.图论](chapter1.md)
+
   * [待解决算法](pythonshu-ju-jie-gou-yu-suan-fa/dai-jie-jue-suan-fa.md)
+
 * [Python Library Language Reference](python-language-reference.md)
 
 
