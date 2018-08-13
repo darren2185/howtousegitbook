@@ -86,188 +86,36 @@ class LStack:
 
 **问题描述：**
 
-
-
 ### 队列
 
-```
-class
-```
+队列
 
 ```py
-TQueue:
+class TQueue:
+    def __init__(self):
+        self._maxsize = 10
+        self._elems = [0] * self._maxsize
+        self.test = self._elems
+        self._f = self._r = 0
+        self._count = 0
 
+    def is_empty(self):
+        return self._count == 0
 
-def
-__init__
-(
-self
-):
+    def enqueue(self, elem):
+        if self._count == self._maxsize:
+            raise ValueError('此队列已满!')
+        self._elems[self._r] = elem
+        self._count += 1
+        self._r = (self._r + 1) % self._maxsize
 
-
-self
-._maxsize
-=
-10
-
-
-self
-._elems
-=
-[
-0
-]
-*
-self
-._maxsize
-
-
-self
-.test
-=
-self
-._elems
-
-
-self
-._f
-=
-self
-._r
-=
-0
-
-
-self
-._count
-=
-0
-
-
-
-
-def
-is_empty
-(
-self
-):
-
-
-return
-self
-._count
-==
-0
-
-
-
-
-def
-enqueue
-(
-self
-,
-elem):
-
-
-if
-self
-._count
-==
-self
-._maxsize:
-
-
-raise
-ValueError
-(
-'
-此队列已满
-!'
-)
-
-
-self
-._elems[
-self
-._r]
-=
-elem
-
-
-self
-._count
-+=
-1
-
-
-self
-._r
-=
-(
-self
-._r
-+
-1
-)
-%
-self
-._maxsize
-
-
-
-
-def
-dequeue
-(
-self
-):
-
-
-if
-self
-.is_empty():
-
-
-raise
-ValueError
-(
-'
-此队列为空
-!'
-)
-
-
-e
-=
-self
-._elems[
-self
-._f]
-
-
-self
-._f
-=
-(
-self
-._f
-+
-1
-)
-%
-self
-._maxsize
-
-
-self
-._count
--=
-1
-
-
-return
-e
+    def dequeue(self):
+        if self.is_empty():
+            raise ValueError('此队列为空!')
+        e = self._elems[self._f]
+        self._f = (self._f + 1) % self._maxsize
+        self._count -= 1
+        return e
 ```
 
 
