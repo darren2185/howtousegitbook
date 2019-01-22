@@ -93,14 +93,14 @@ Counter(words).most_common(10)  # 取频率前10的信息
 > 个人猜想实现步骤：用set()对象获取所有keys,然后利用dict()对象统计词频数
 
 Counter对象作为dict的延伸，能使用所有dict的属性和方法
-### elements()
+#### elements()
 返回一个iterator对象，其元素为根据出现次数依次展开，若次数为0或者负数，则不显示出来。
 ```py
 c=Counter(a=2,b=1,c=3)
 sorted(c.elements())
 # 输出['c','c','c','a','a','b']
 ```
-### most_common([n])
+#### most_common([n])
 返回出现前n次元素列表，如果n缺省，则显示所有，按统计次数从大到小。
 ```py
 Counter('abracadabra').most_common(3)
@@ -115,4 +115,44 @@ c.substract(d)
 c
 # Counter({'a':3, 'b':0 , 'c':-3, 'd': -6})
 ```
+### deque()
+###deque([iterable[,maxlen]])
+初始化双端队列对象，返回一个从左至右具有迭代性的双端队列，如果iterable为空则初始为空的deque对象。如果maxlen为空，则deque对象空间为无限，否则在操作deque时，需要考虑容积个数，空间已满，再添加元素，从添加侧的相反一段，排挤出一个元素。
+deque是double-ended queue的缩写，主要用来支持线程安全thread-safe, 内存添加或删除。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
