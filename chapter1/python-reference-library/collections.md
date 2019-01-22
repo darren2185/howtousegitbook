@@ -70,5 +70,8 @@ z.parents
 # 输出 ChainMap({'c': 'c', 'd': 'd'},{'a': 'c', 'd': 'b'})
 ```
 >小结:更新ChainMap对象可以利用maps的list属性进行修改及增删
-###
+
+### Counter
+Counter是对字典的补充，用于追踪值出现的次数（频率统计）
+
 
