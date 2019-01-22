@@ -90,4 +90,6 @@ words = re.findall(r'\w+', open('hamlet.txt','r').read().lower())
 Counter(words).most_common(10)  # 取频率前10的信息
 
 ```
+> 个人猜想实现步骤：用set()对象获取所有keys,然后利用dict()对象统计词频数
+Counter对象作为dict的延伸，能使用所有dict的属性和方法
 
