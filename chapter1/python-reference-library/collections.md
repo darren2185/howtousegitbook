@@ -135,7 +135,7 @@ c
 > maxlen deque的最大容纳值
 
 ### defaultdict()
-
+从某种意义上来说，defaultdict类只是衍生了dict类，在dict.setdefault(k,v)，在其参数中default_factory为None,则type(dd[k])为NoneType， 其最终实现v为何种datatype.
 ```py
 def default_example1():
     s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
