@@ -219,5 +219,30 @@ OrderedDict对象类似于正规字典，但其关键字顺序根据插入顺序
 > * _popitem\(last=True\)_方法返回或者移除一个键值对，若last=True，后进先出，否则先进先出
 > * _move\_to\_end\(key,last=True\)_将已有的关键字移至有序字典的末端，如果last为True，则右尾，否则为左尾，如果该值不存在，则引起KeyError
 
+```py
+d={'banana':3,'apple':4,'pear':1,'orange':2}
+OrderDict(sorted(d.items(), key=lambda t:t[0])
+
+# 输出 OrderedDict([('apple',4),('banana',3),('orange',2),('pear',1)])
+
+class LastUpdatedOrderedDict(OrderDict):
+    'Store items in the order the keys were last added'
+    
+    def __setitem__(self, key, value):
+        if key in self:
+            del self[key]
+        OrderDict.__setitem__(self, key, value)
+
+class OrderedCounter(Counter, OrderedDict):
+    'Counter that remembers the order elements are fisrt encountered'
+    
+    def __repr__(self):
+        return '%s(%r)' % (self.__class__.__name__, OrderedDict(self)
+        
+    def __reduce__(self):
+        return self.__class__, (OrderedDict(self),)
+
+```
+
 
 
