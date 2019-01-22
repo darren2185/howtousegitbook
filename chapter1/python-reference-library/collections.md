@@ -4,7 +4,7 @@
 
 ### [ChainMap](#chainmap)
 
-\[ChainMap\]{\#1}类用来管理多个映射对象，方便将多个对象当做一个来出来，比在一个字典里创建多个映射的数据，并调用每个映射的update\(\)函数快，同时也可以用来模拟嵌套作用于和模块化处理。
+ChainMap类用来管理多个映射对象，方便将多个对象当做一个来出来，比在一个字典里创建多个映射的数据，并调用每个映射的update\(\)函数快，同时也可以用来模拟嵌套作用于和模块化处理。
 
 class collections.ChainMap\(\*map\)  
 ChainMap类可将多个字典或者其他映射对象放在一起，组成一个单一的，可更新的的映射对象，若无参数，默认创建空映射对象。
@@ -227,7 +227,7 @@ OrderDict(sorted(d.items(), key=lambda t:t[0])
 
 class LastUpdatedOrderedDict(OrderDict):
     'Store items in the order the keys were last added'
-    
+
     def __setitem__(self, key, value):
         if key in self:
             del self[key]
@@ -235,13 +235,12 @@ class LastUpdatedOrderedDict(OrderDict):
 
 class OrderedCounter(Counter, OrderedDict):
     'Counter that remembers the order elements are fisrt encountered'
-    
+
     def __repr__(self):
         return '%s(%r)' % (self.__class__.__name__, OrderedDict(self)
-        
+
     def __reduce__(self):
         return self.__class__, (OrderedDict(self),)
-
 ```
 
 
