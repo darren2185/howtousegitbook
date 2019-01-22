@@ -16,7 +16,7 @@ b = {'c': 'c', 'd': 'd'}
 c = {'a': 'c', 'd': 'b'}
 z = collections.ChainMap(a, b, c)
 
-# ChainMap({'a': 'a', 'b': 'b'},{'c': 'c', 'd': 'd'},{'a': 'c', 'd': 'b'})
+# 输出：ChainMap({'a': 'a', 'b': 'b'},{'c': 'c', 'd': 'd'},{'a': 'c', 'd': 'b'})
 ```
 #### Maps
 返回用户可更新的映射对象列表(list对象)
@@ -27,11 +27,11 @@ a = {'a': 'a', 'b': 'b'}
 b = {'c': 'c', 'd': 'd'}
 c = {'a': 'c', 'd': 'b'}
 z = collections.ChainMap(a, b, c)
-
+z.maps[0]['a']='c'
 print(z.maps)
-# [{'a': 'a', 'b': 'b'},{'c': 'c', 'd': 'd'},{'a': 'c', 'd': 'b'}]
+# 输出：[{'a': 'c', 'b': 'b'},{'c': 'c', 'd': 'd'},{'a': 'c', 'd': 'b'}]
 ```
-
+#### 
 
 
 
