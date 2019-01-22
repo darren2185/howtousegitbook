@@ -210,7 +210,14 @@ for emp in map(EmployeeRecord._make, cursor.fetchall()):
 > 3. _somenamedtuple.\_replace\(\)_ 更新某个fieldname的值
 > 4. _somenamedtuple.\_fields_ 返回tuple对象列表
 > 5. _somenamedtuple.fields\_defaults _返回字典映射对象的默认值
-> 6.
+>    6.
+
+### OrderedDict objects
+
+OrderedDict对象类似于正规字典，但其关键字顺序根据插入顺序排列
+
+> * _popitem\(last=True\)_方法返回或者移除一个键值对，若last=True，后进先出，否则先进先出
+> * _move\_to\_end\(key,last=True\)_将已有的关键字移至有序字典的末端，如果last为True，则右尾，否则为左尾，如果该值不存在，则引起KeyError
 
 
 
