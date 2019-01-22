@@ -187,7 +187,7 @@ p = Point(11,y=22)
 p.x, p.y
 # (11,22)
 ```
-
+namedtuple在读取数据库及相关类似存储的数据文件，使用比较方便
 ```py
 EmployeeRecord = namedtuple('EmployeeRecord','name,age,title,department,paygrade')
 
