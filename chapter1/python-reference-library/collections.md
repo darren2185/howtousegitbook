@@ -56,7 +56,7 @@ z = z.new_child(xx)
 
 #### parents
 
-返回第一个映射对象之外的所有映射对象的<span id="chainmap">ChainMap</span>对象，主要用来获取不同作用域嵌套情况，比如本地作用域、类作用域、全局作用域构造成的ChainMap就可以依次递归整个ChainMap对象，相当于ChainMap\(\*d.maps\[1:\]\)
+返回第一个映射对象之外的所有映射对象的ChainMap对象，主要用来获取不同作用域嵌套情况，比如本地作用域、类作用域、全局作用域构造成的ChainMap就可以依次递归整个ChainMap对象，相当于ChainMap\(\*d.maps\[1:\]\)
 
 ```py
 import collections
