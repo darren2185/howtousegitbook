@@ -81,4 +81,13 @@ for word in ['red','red','blue','green','blue','blue]:
 print(cnt)
 # 输出:Counter({'blue':3, 'red':2, 'green':1})
 ```
+```py
+# 词频统计
+import re
+from collections import Counter
+
+words = re.findall(r'\w+', open('hamlet.txt','r').read().lower())
+Counter(words).most_common(10)  # 取频率前10的信息
+
+```
 
