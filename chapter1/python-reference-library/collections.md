@@ -146,7 +146,7 @@ c
 > insert\(i, x\) 在i位置插入x  
 > pop\(\) right side  
 > popleft\(\)  
-> remove\(value\)   
+> remove\(value\)  
 > reverse\(\)  
 > rotate\(n=1\) rotate 1步，n为+，相当于d.appendleft\(d.pop\(\)\)，n为1，相当于d.append\(d.popleft\(\)\)  
 > maxlen deque的最大容纳值
@@ -187,7 +187,9 @@ p = Point(11,y=22)
 p.x, p.y
 # (11,22)
 ```
+
 namedtuple在读取数据库及相关类似存储的数据文件，使用比较方便
+
 ```py
 EmployeeRecord = namedtuple('EmployeeRecord','name,age,title,department,paygrade')
 
@@ -202,6 +204,9 @@ cursor.execute('select name, age, title, department,paygrade from employees')
 for emp in map(EmployeeRecord._make, cursor.fetchall()):
     print(emp.name, emp.title)
 ```
+
+> 1. somenamedtuple.\_make\(iterable\)从现有的iterable对象创建新的tuple实例
+> 2. somenamedtuple.\_asdict\(\)返回新的OrderedDict\(\)对象，\(k, v\)键值对
 
 
 
