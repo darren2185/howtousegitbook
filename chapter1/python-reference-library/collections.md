@@ -101,5 +101,11 @@ sorted(c.elements())
 # 输出['c','c','c','a','a','b']
 ```
 ### most_common([n])
+返回出现前n次元素列表，如果n缺省，则显示所有，按统计次数从大到小。
+```py
+Counter('abracadabra').most_common(3)
+[('a', 5),('r',2),('b',2)]
+```
+### substract([iterable-or-mapping])
 
 
