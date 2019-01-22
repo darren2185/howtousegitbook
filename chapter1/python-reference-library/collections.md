@@ -117,8 +117,22 @@ c
 ```
 ### deque()
 ###deque([iterable[,maxlen]])
-初始化双端队列对象，返回一个从左至右具有迭代性的双端队列，如果iterable为空则初始为空的deque对象。如果maxlen为空，则deque对象空间为无限，否则在操作deque时，需要考虑容积个数，空间已满，再添加元素，从添加侧的相反一段，排挤出一个元素。
-deque是double-ended queue的缩写，主要用来支持线程安全thread-safe, 内存添加或删除。
+初始化双端队列对象，返回一个从左至右具有迭代性的双端队列，如果iterable为空则初始为空的deque对象。如果maxlen为空，则deque对象空间为无限，否则在操作deque时，需要考虑容积个数，空间已满，再添加元素，从添加侧的相反一段，排挤出一个元素。deque是double-ended queue的缩写，主要用来支持线程安全thread-safe, 内存添加或删除。
+> append(x) 右侧添加
+> appednleft(x) 左侧添加
+> clear() 清楚deque中的所有元素
+> copy() 浅复制
+> count(x)  统计满足元素为x的个数
+> extend(iterable) 在右侧扩展deque
+> extendleft(iterable)在左侧扩展deque,将会颠倒iterable的顺序
+> index(x[,start[,stop]]]) 返回x在deque中的位置，返回第一个出现的位置或者raise ValueError if not found
+> insert(i, x) 在i位置插入x
+> pop() right side
+> popleft()
+> remove(value) 
+> reverse()
+> rotate(n=1) rotate 1步，n为+，相当于d.appendleft(d.pop())，n为1，相当于d.append(d.popleft())
+> maxlen deque的容积
 
 
 
