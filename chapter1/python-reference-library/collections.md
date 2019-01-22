@@ -8,7 +8,6 @@ ChainMap类用来管理多个映射对象，方便将多个对象当做一个来
 
 class collections.ChainMap\(\*map\)  
 ChainMap类可将多个字典或者其他映射对象放在一起，组成一个单一的，可更新的的映射对象，若无参数，默认创建空映射对象。
-
 ```py
 import collections
 
@@ -18,14 +17,6 @@ c = {'a': 'c', 'd': 'b'}
 z = collections.ChainMap(a, b, c)
 ```
 
-```Python
-    import collections
-
-    a = {'a': 'a', 'b': 'b'}
-    b = {'c': 'c', 'd': 'd'}
-    c = {'a': 'c', 'd': 'b'}
-    z = collections.ChainMap(a, b, c)hon
-```
 
 
 
