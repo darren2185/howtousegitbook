@@ -94,6 +94,11 @@ Counter(words).most_common(10)  # 取频率前10的信息
 
 Counter对象作为dict的延伸，能使用所有dict的属性和方法
 ### elements()
-
+返回一个iterator对象，其元素为根据出现次数依次展开，若次数为0或者负数，则不显示出来。
+```py
+c=Counter(a=2,b=1,c=3)
+sorted(c.elements())
+# 输出['c','c','c','a','a','b']
+```
 
 
