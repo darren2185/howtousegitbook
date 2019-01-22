@@ -155,7 +155,16 @@ def default_example2():
 
     print(sorted(dd.items()))
 ```
+### namedtuple()
+namedtuple能够用来创建类似于元祖的数据类型，除了能够用索引来访问数据，能够迭代，更能够方便的通过属性名来访问数据,类似type(name,base,dict_type)来定义类，其属性也是不可以变的。
+```py
+from collections import namedtuple
 
+Point = namedtuple('Point',['x','y'])
+p = Point(11,y=22)
+p.x, p.y
+# (11,22)
+```
 
 
 
