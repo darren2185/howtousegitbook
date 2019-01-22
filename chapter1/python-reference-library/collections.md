@@ -208,7 +208,7 @@ for emp in map(EmployeeRecord._make, cursor.fetchall()):
 > 1. somenamedtuple.\_make\(iterable\)从现有的iterable对象创建新的tuple实例
 > 2. somenamedtuple.\_asdict\(\)返回新的OrderedDict\(\)对象，\(k, v\)键值对
 > 3. somenamedtuple.\_replace\(\) 更新某个fieldname的值
-> 4. somenamedtuple.\_fields
+> 4. somenamedtuple.\_fields 返回tuple对象列表
 
 
 
