@@ -73,5 +73,12 @@ z.parents
 
 ### Counter
 Counter是对字典的补充，用于追踪值出现的次数（频率统计）
-
+```py
+from collections import Counter
+cnt = Counter()
+for word in ['red','red','blue','green','blue','blue]:
+    cnt[word] += 1
+print(cnt)
+# 输出:Counter({'blue':3, 'red':2, 'green':1})
+```
 
