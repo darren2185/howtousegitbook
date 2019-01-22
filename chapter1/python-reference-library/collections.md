@@ -134,8 +134,27 @@ c
 > rotate(n=1) rotate 1步，n为+，相当于d.appendleft(d.pop())，n为1，相当于d.append(d.popleft())
 > maxlen deque的最大容纳值
 
+### defaultdict()
+
+```py
+def default_example1():
+    s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
+    dd ={}
+    for k, v in s:
+        dd.setdefault(k, [])
+        dd[k].append(v)
+
+    print(sorted(dd.items()))
 
 
+def default_example2():
+    s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
+    dd = defaultdict(list)
+    for k, v in s:
+        dd[k].append(v)
+
+    print(sorted(dd.items()))
+```
 
 
 
