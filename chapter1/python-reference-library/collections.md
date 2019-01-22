@@ -205,10 +205,12 @@ for emp in map(EmployeeRecord._make, cursor.fetchall()):
     print(emp.name, emp.title)
 ```
 
-> 1. somenamedtuple.\_make\(iterable\)从现有的iterable对象创建新的tuple实例
-> 2. somenamedtuple.\_asdict\(\)返回新的OrderedDict\(\)对象，\(k, v\)键值对
-> 3. somenamedtuple.\_replace\(\) 更新某个fieldname的值
-> 4. somenamedtuple.\_fields 返回tuple对象列表
+> 1. _somenamedtuple.\_make\(iterable\)_从现有的iterable对象创建新的tuple实例
+> 2. _somenamedtuple.\_asdict\(\)_返回新的OrderedDict\(\)对象，\(k, v\)键值对
+> 3. _somenamedtuple.\_replace\(\)_ 更新某个fieldname的值
+> 4. _somenamedtuple.\_fields_ 返回tuple对象列表
+> 5. _somenamedtuple.fields\_defaults _返回字典映射对象的默认值
+> 6.
 
 
 
