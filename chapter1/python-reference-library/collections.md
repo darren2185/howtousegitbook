@@ -100,5 +100,6 @@ c=Counter(a=2,b=1,c=3)
 sorted(c.elements())
 # 输出['c','c','c','a','a','b']
 ```
+### most_common([n])
 
 
