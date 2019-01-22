@@ -132,7 +132,7 @@ c
 > remove(value) 
 > reverse()
 > rotate(n=1) rotate 1步，n为+，相当于d.appendleft(d.pop())，n为1，相当于d.append(d.popleft())
-> maxlen deque的容积
+> maxlen deque的最大容纳值
 
 
 

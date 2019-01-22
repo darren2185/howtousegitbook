@@ -26,5 +26,3 @@
 
 ## temp
 
-* [temp](temp.md)
-
