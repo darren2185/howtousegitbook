@@ -107,5 +107,12 @@ Counter('abracadabra').most_common(3)
 [('a', 5),('r',2),('b',2)]
 ```
 ### substract([iterable-or-mapping])
-
+相当于dict.update()更新
+```py
+c = Counter(a=4, b=2, c=0, d=-2)
+d = Counter(a=1, b=2, c=3, d=4)
+c.substract(d)
+c
+# Counter({'a':3, 'b':0 , 'c':-3, 'd': -6})
+```
 
