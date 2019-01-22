@@ -2,7 +2,7 @@
 
 ---
 
-### [ChainMap](#1)
+### [ChainMap](#chainmap)
 
 [ChainMap]{#1}类用来管理多个映射对象，方便将多个对象当做一个来出来，比在一个字典里创建多个映射的数据，并调用每个映射的update\(\)函数快，同时也可以用来模拟嵌套作用于和模块化处理。
 
@@ -56,7 +56,7 @@ z = z.new_child(xx)
 
 #### parents
 
-返回第一个映射对象之外的所有映射对象的[ChainMap]{#1}对象，主要用来获取不同作用域嵌套情况，比如本地作用域、类作用域、全局作用域构造成的ChainMap就可以依次递归整个ChainMap对象，相当于ChainMap\(\*d.maps\[1:\]\)
+返回第一个映射对象之外的所有映射对象的<span id="chainmap">ChainMap</span>对象，主要用来获取不同作用域嵌套情况，比如本地作用域、类作用域、全局作用域构造成的ChainMap就可以依次递归整个ChainMap对象，相当于ChainMap\(\*d.maps\[1:\]\)
 
 ```py
 import collections
