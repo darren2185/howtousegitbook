@@ -31,7 +31,47 @@ z.maps[0]['a']='c'
 print(z.maps)
 # 输出：[{'a': 'c', 'b': 'b'},{'c': 'c', 'd': 'd'},{'a': 'c', 'd': 'b'}]
 ```
-#### 
+#### new_child(m=None)
+创建一个新的ChainMap对象，在列表第一个元素里插入映射对象m，后面紧跟原来所有映射对象。
+```py
+import collections
+
+a = {'a': 'a', 'b': 'b'}
+b = {'c': 'c', 'd': 'd'}
+c = {'a': 'c', 'd': 'b'}
+z = collections.ChainMap(a, b, c)
+
+xx = {'n':'m'}
+z = z.new_child(xx)
+
+# 输出ChildMap({'a': 'a', 'b': 'b'},{'c': 'c', 'd': 'd'},{'a': 'c', 'd': 'b'},{'n':'m'})
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
