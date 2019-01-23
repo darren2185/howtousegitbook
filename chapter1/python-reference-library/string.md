@@ -11,7 +11,13 @@ class str\(object=b'', encoding='utf-8', errors='strict'\)
 
 #### String Methods
 
-> str.capitalize\(\)  首字符大写
-> str.casefold\(\)    转特殊字符成小写形式：German lowercase letter 'ß' is equivalent to "ss". Since it is already lowercase, lower() would do nothing to 'ß'; casefold() converts it to "ss".
+> * str.capitalize\(\)  首字符大写
+> * str.casefold\(\)    转特殊字符成小写形式：German lowercase letter 'ß' is equivalent to "ss". Since it is already lowercase, lower() would do nothing to 'ß'; casefold() converts it to "ss".
+> * str.center(width[,fillchar])在width宽度中居中，fillchar表示空白填充字符
+> * str.count(sub[,start[,end]]) 计算sub在str中出现的次数，start表示开始位置，end表示结束位置, start和end可选
+> * str.encode(encoding='utf-8', errors='strict') 返回加码的bytes字符串对象
+> * str.endswith(suffix[,start[,end]])
+> * str.startswith(prefix[,start[,end]])
+
 
 
