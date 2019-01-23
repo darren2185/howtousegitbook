@@ -19,6 +19,7 @@ class str\(object=b'', encoding='utf-8', errors='strict'\)
 > * str.endswith(suffix[,start[,end]]) 如果以suffix结尾为True，否则False
 > * str.startswith(prefix[,start[,end]]) 如果以prefix结尾为True，否则False
 > * str.find(sub[,start[,end]]) 查找sub，如有则True，反之False,类似'sub' in 'str'
+> * str.format(\*arg, \*\*kwarg) 格式化字符串输出str.format(iterable),或者根据关键字{name}来填充。
 
 
 
