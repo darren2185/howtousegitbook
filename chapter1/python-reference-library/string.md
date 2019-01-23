@@ -18,6 +18,8 @@ class str\(object=b'', encoding='utf-8', errors='strict'\)
 > * str.encode(encoding='utf-8', errors='strict') 返回加码的bytes字符串对象
 > * str.endswith(suffix[,start[,end]]) 如果以suffix结尾为True，否则False
 > * str.startswith(prefix[,start[,end]]) 如果以prefix结尾为True，否则False
+> * str.find(sub[,start[,end]]) 查找sub，如有则True，反之False,类似'sub' in 'str'
+
 
 
 
