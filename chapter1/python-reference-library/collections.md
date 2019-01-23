@@ -173,6 +173,7 @@ def default_example2():
         dd[k].append(v)
 
     print(sorted(dd.items()))
+# {"yellow":[1],'blue':[2]....}
 ```
 
 ### namedtuple\(\)
