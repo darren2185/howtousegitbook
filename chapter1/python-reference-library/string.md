@@ -20,6 +20,13 @@ class str\(object=b'', encoding='utf-8', errors='strict'\)
 > * str.startswith(prefix[,start[,end]]) 如果以prefix结尾为True，否则False
 > * str.find(sub[,start[,end]]) 查找sub，如有则True，反之False,类似'sub' in 'str'
 > * str.format(\*arg, \*\*kwarg) 格式化字符串输出str.format(iterable),或者根据关键字{name}来填充。
+> * str.format_map\(mapping\) 跟str.format()类似，仅能使用dict对象映射
+> * str.index(sub[,start[,end]]) 跟find()类似，找sub的位置，若没有找到则ValueError
+> * str.isalnum()  判断具体字符是不是跟字母跟数据
+> * str.isalpha()  判断字符是不是为字母
+> * str.isascii()  判断字母是否为ascii码
+> * str.isdecimal() 判断是否为数字
+> * str.isdigital() 
 
 
 
