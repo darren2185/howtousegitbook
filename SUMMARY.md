@@ -8,6 +8,10 @@
     * [string](chapter1/python-reference-library/string.md)
     * [json](chapter1/python-reference-library/json.md)
 * [Python进阶](pythonjin-jie.md)
+  * [Numpy](pythonjin-jie/numpy.md)
+  * Scipy
+  * [Pandas](pythonjin-jie/pandas.md)
+  * Matplotlib
 * [Python数据结构与算法](pythonshu-ju-jie-gou-yu-suan-fa.md)
   * [1.线性表](pythonshu-ju-jie-gou-yu-suan-fa/1xian-xing-88685d.md)
   * [2.字符串](pythonshu-ju-jie-gou-yu-suan-fa/2zi-fu-chuan.md)
@@ -24,7 +28,5 @@
   * [6.查找](pythonshu-ju-jie-gou-yu-suan-fa/6cha-zhao.md)
   * [8.图论](chapter1.md)
   * [待解决算法](pythonshu-ju-jie-gou-yu-suan-fa/dai-jie-jue-suan-fa.md)
-* [Python Library Language Reference](python-language-reference.md)
-
-## temp
+* [temp](temp.md)
 
