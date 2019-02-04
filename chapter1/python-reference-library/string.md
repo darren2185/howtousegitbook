@@ -43,8 +43,12 @@ str.rjust(20)
 ','.join(['d','c','e','f'])   #'d,c,e,f'
 '/'.join(['d','c','e','f'])   #'d/c/e/f'
 ```
-
-
+> * str.lower() 返回字符串全转换为小写的副本
+> * str.lstrip([chars]) 返回去掉首字符的字符串副本，chars参数为描述要删除字符的集合，如忽略或者None，则默认删除空白字符，chars不是个字符前缀，则其所有可能组合字符串的均会被删除
+```py
+'    spacious   '.lstrip() #'spacious   '
+'www.example.com'.lstrip('cmowz.') #'example.com'
+``` 
 
 
 
