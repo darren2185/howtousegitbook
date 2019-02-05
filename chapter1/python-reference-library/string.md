@@ -64,8 +64,22 @@ str.rjust(20)
 ```py
 '1,2,3'.split(',')  #['1','2','3']
 '1,2,3,4'.split(',',maxsplit=2) #['1','2','3,4']
-
+'1,2,,3'.split(',') #['1','2','','3']
 ```
-
+> * str.splitlines([keepends]) 返回以行结束符为边界的列表，行结束符不包含在列表元素中，除非参数keepends给出或者为True
+<table>
+<tr style='align:center'>
+    <td>Representation</td>
+    <td>Description</td>
+</tr>
+<tr>
+    <td>\n</td>
+    <td>Line Feed</td>
+</tr>
+<tr>
+    <td>\r</td>
+    <td>Carriage Return</td>
+</tr>
+</table>
 
 
