@@ -15,6 +15,7 @@ class str\(object=b'', encoding='utf-8', errors='strict'\)
 > * str.casefold\(\)    转特殊字符成小写形式：German lowercase letter 'ß' is equivalent to "ss". Since it is already lowercase, lower() would do nothing to 'ß'; casefold() converts it to "ss".
 > * str.center(width[,fillchar])在width宽度中居中，fillchar表示空白填充字符
 > * str.ljust(width[,fillchar]) 字符串的宽度大于字符串长度时，左对齐，其右侧则为padding,或者由其他字符替代
+> * str.rjust(width[,fillchar]) 字符串的宽度大于字符串长度时，右对齐，其左侧则为padding,或者由其他字符替代
 ```py
 #如果用len(str)来测试字符长度均为20，其涵盖了替代字符的长度
 str.center(20,' ')  #第二个参数必须为实质性的字符，空白或者其他
