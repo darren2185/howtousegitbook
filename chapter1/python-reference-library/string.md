@@ -67,7 +67,7 @@ str.rjust(20)
 '1,2,,3'.split(',') #['1','2','','3']
 ```
 > * str.splitlines([keepends]) 返回以行结束符为边界的列表，行结束符不包含在列表元素中，除非参数keepends给出或者为True
-<table>
+<table width=480>
 <tr column=2>
     <td>Representation</td>
     <td>Description</td>
