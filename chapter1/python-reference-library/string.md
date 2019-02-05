@@ -49,11 +49,13 @@ str.rjust(20)
 ```
 > * str.lower() 返回字符串全转换为小写的副本
 > * str.lstrip([chars]) 返回去掉首字符的字符串副本，chars参数为描述要删除字符的集合，如忽略或者None，则默认删除空白字符，chars不是个字符前缀，则其所有可能组合字符串的均会被删除
+> * str.rstrip([chars]) 返回去掉尾部字符的字符串副本，关于chars见上
 ```py
 '    spacious   '.lstrip() #'spacious   '
 'www.example.com'.lstrip('cmowz.') #'example.com'
 ``` 
 > * str.partition(sep) 分割按sep为基础的字符串，并返回包含三个元素的tuple，第一个为第一次遇到分隔符前部部分，第二个为分隔符本身，第三个为分隔符之后部分。如果分隔符没在字符中，则第一个为字符串本身，余下均为空字符串
+> * str.rpartition(sep) 分割以sep的字符串，并返回包含三个元素的tuple，第一个为右侧开始第一个分隔符之前的所有字符，第二个为分隔符本身，第三个为分割符之后
 > * str.replace(old,new[,count]) 用子串new替换子串old，并返回替换字符串后的字符串副本，count参数则明示替换的参数,如果count大于old出现的次数，则表示替换所有old字符串
 > * 
 
