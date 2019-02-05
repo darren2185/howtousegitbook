@@ -118,4 +118,37 @@ str.rjust(20)
 </tr>
 </table>
 
+```py
+'ab c\n\nde fg\rkl\r\n'.splitlines() #['ab c','','de fg','kl']
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
