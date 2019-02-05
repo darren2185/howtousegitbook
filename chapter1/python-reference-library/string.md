@@ -53,6 +53,8 @@ str.rjust(20)
 ```py
 '    spacious   '.lstrip() #'spacious   '
 'www.example.com'.lstrip('cmowz.') #'example.com'
+'    spacious   '.rstrip() #'     spacious'
+'mississippi'.rstrip('ipz')  #'mississ'
 ``` 
 > * str.partition(sep) 分割按sep为基础的字符串，并返回包含三个元素的tuple，第一个为第一次遇到分隔符前部部分，第二个为分隔符本身，第三个为分隔符之后部分。如果分隔符没在字符中，则第一个为字符串本身，余下均为空字符串
 > * str.rpartition(sep) 分割以sep的字符串，并返回包含三个元素的tuple，第一个为右侧开始第一个分隔符之前的所有字符，第二个为分隔符本身，第三个为分割符之后
