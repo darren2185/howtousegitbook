@@ -25,10 +25,13 @@ str.rjust(20)
 > * str.encode(encoding='utf-8', errors='strict') 返回加码的bytes字符串对象
 > * str.endswith(suffix[,start[,end]]) 如果以suffix结尾为True，否则False
 > * str.startswith(prefix[,start[,end]]) 如果以prefix结尾为True，否则False
-> * str.find(sub[,start[,end]]) 查找sub，如有则True，反之False,类似'sub' in 'str'
 > * str.format(\*arg, \*\*kwarg) 格式化字符串输出str.format(iterable),或者根据关键字{name}来填充。
 > * str.format_map\(mapping\) 跟str.format()类似，仅能使用dict对象映射
 > * str.index(sub[,start[,end]]) 跟find()类似，找sub的位置，若没有找到则ValueError
+> * str.rindex(sub[,start[,end]]) 类似rfind(),若没有找到结果，则引起ValueError
+> * str.find(sub[,start[,end]]) 查找sub，如有则True，反之False,类似'sub' in 'str'
+> * str.rfind(sub[,start[,end]]) 从右侧开始寻找sub子字符串，start和end表示起始与终止区间，如果寻找到则返回index位置，否则返回-1(False)
+
 > * str.isalnum()  判断具体字符是不是跟字母跟数据
 > * str.isalpha()  判断字符是不是为字母
 > * str.isascii()  判断字母是否为ascii码
@@ -51,7 +54,7 @@ str.rjust(20)
 ``` 
 > * str.partition(sep) 分割按sep为基础的字符串，并返回包含三个元素的tuple，第一个为第一次遇到分隔符前部部分，第二个为分隔符本身，第三个为分隔符之后部分。如果分隔符没在字符中，则第一个为字符串本身，余下均为空字符串
 > * str.replace(old,new[,count]) 用子串new替换子串old，并返回替换字符串后的字符串副本，count参数则明示替换的参数,如果count大于old出现的次数，则表示替换所有old字符串
-> * str.rfind(sub[,start[,end]]) 
+> * 
 
 
 
