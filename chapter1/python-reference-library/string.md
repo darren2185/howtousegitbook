@@ -72,7 +72,6 @@ str.rjust(20)
     <td>Representation</td>
     <td>Description</td>
 </tr>
-
 <tr>
     <td>\n</td>
     <td>Line Feed</td>
@@ -80,6 +79,42 @@ str.rjust(20)
 <tr>
     <td>\r</td>
     <td>Carriage Return</td>
+</tr>
+<tr>
+    <td>\r\n</td>
+    <td>Carriage Return + Line Feed</td>
+</tr>
+<tr>
+    <td>\v or \x0b</td>
+    <td>Line Tabulation</td>
+</tr>
+<tr>
+    <td>\f Or \x0c</td>
+    <td>Form Feed</td>
+</tr>
+<tr>
+    <td>\x1c</td>
+    <td>File Separator</td>
+</tr>
+<tr>
+    <td>\x1d</td>
+    <td>Group Separator</td>
+</tr>
+<tr>
+    <td>\x1e</td>
+    <td>Record Separator</td>
+</tr>
+<tr>
+    <td>\x85</td>
+    <td>Next Line(C1 Control Code)</td>
+</tr>
+<tr>
+    <td>\u2028</td>
+    <td>Line Separator</td>
+</tr>
+<tr>
+    <td>\u2029</td>
+    <td>Paragraph Separator</td>
 </tr>
 </table>
 
