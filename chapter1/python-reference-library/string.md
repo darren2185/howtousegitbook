@@ -120,9 +120,16 @@ str.rjust(20)
 
 ```py
 'ab c\n\nde fg\rkl\r\n'.splitlines() #['ab c','','de fg','kl']
-
+'ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True) #['ab c\n','\n','de fg\r','kl\r\n']
 ```
-dfdl
+>> 和split()不同，当sep指定，split()将返回一个空列表，以下示例作为对比：
+```py
+"".splitlines()  # []
+"One line\n".splitlines() #[’One line']
+"".split('\n') #['']
+"Two lines\n'.split('\n') #['Two lines']
+```
+> * 
 
 
 
