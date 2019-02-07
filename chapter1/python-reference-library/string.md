@@ -53,7 +53,7 @@ str.rjust(20)
 > * str.rstrip([chars]) 返回去掉尾部字符的字符串副本，关于chars见上
 ```py
 '    spacious   '.strip()  # spacious
-'www.example.com'.strip('cmowz') # example
+'www.example.com'.strip('cmowz.') # example
 '    spacious   '.lstrip() #'spacious   '
 'www.example.com'.lstrip('cmowz.') #'example.com'
 '    spacious   '.rstrip() #'     spacious'
