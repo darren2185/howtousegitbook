@@ -60,7 +60,7 @@ comment_string.strip('#.') #Section 3.2.1 Issue #32'
 'www.example.com'.lstrip('cmowz.') #'example.com'
 '    spacious   '.rstrip() #'     spacious'
 'mississippi'.rstrip('ipz')  #'mississ'
-``` 
+```
 > * str.partition(sep) 分割按sep为基础的字符串，并返回包含三个元素的tuple，第一个为第一次遇到分隔符前部部分，第二个为分隔符本身，第三个为分隔符之后部分。如果分隔符没在字符中，则第一个为字符串本身，余下均为空字符串
 > * str.rpartition(sep) 分割以sep的字符串，并返回包含三个元素的tuple，第一个为右侧开始第一个分隔符之前的所有字符，第二个为分隔符本身，第三个为分割符之后
 > * str.replace(old,new[,count]) 用子串new替换子串old，并返回替换字符串后的字符串副本，count参数则明示替换的参数,如果count大于old出现的次数，则表示替换所有old字符串
@@ -135,7 +135,10 @@ comment_string.strip('#.') #Section 3.2.1 Issue #32'
 "".split('\n') #['']
 "Two lines\n'.split('\n') #['Two lines']
 ```
-> * 
+> * str.title()返回一个单词首字母均为大写的字符串
+```py
+'Hello world'.title() # 'Hello World'
+```
 
 
 
