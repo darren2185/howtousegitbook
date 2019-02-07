@@ -54,6 +54,8 @@ str.rjust(20)
 ```py
 '    spacious   '.strip()  # spacious
 'www.example.com'.strip('cmowz.') # example
+comment_string='#......Section 3.2.1 Issue #32....#'
+comment_string.strip('#.') #Section 3.2.1 Issue #32'
 '    spacious   '.lstrip() #'spacious   '
 'www.example.com'.lstrip('cmowz.') #'example.com'
 '    spacious   '.rstrip() #'     spacious'
