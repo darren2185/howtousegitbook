@@ -61,6 +61,7 @@ str.rjust(20)
 > * str.replace(old,new[,count]) 用子串new替换子串old，并返回替换字符串后的字符串副本，count参数则明示替换的参数,如果count大于old出现的次数，则表示替换所有old字符串
 > * str.rsplit(sep=None, maxsplit=-1) 返回以sep作为分隔符的字符串单词列表，如果maxsplit被赋予，则就会执行maxsplit次，其余在不会再执行，当maxsplit为默认值-1或者没有描述时，根据sep出现次数来分割字符串;当sep没有描述或者None，任何空白字符均为分隔符。
 > * str.split(sep=None, maxsplit=1) 返回以sep作为分割符的字符串单词列表，如果maxsplit被赋予，则就会执行maxsplit次，其余在不会再执行，当maxsplit为默认值-1或者没有描述时，根据sep出现次数来分割字符串;
+> * str.split([chars]) 返回一个首尾均去掉了
 ```py
 '1,2,3'.split(',')  #['1','2','3']
 '1,2,3,4'.split(',',maxsplit=2) #['1','2','3,4']
