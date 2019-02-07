@@ -138,6 +138,12 @@ comment_string.strip('#.') #Section 3.2.1 Issue #32'
 > * str.title()返回一个单词首字母均为大写的字符串
 ```py
 'Hello world'.title() # 'Hello World'
+"they're bill's friends from the UK".title() 
+# 'They'Re Bill'S Friends From The Uk'
+import re
+def titlecase(s):
+    return re.sub(r'[A-Za-z]+('[A-Za-z]+)?',lambda mo:mo.group(0)[0].upper() + mo.group(0)[1:].lower(),s)
+titlecase("they're bill's friends.") # They're Bill's Friends
 ```
 
 
