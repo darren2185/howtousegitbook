@@ -146,7 +146,7 @@ def titlecase(s):
     return re.sub(r'[A-Za-z]+('[A-Za-z]+)?',lambda mo:mo.group(0)[0].upper() + mo.group(0)[1:].lower(),s)
 titlecase("they're bill's friends.") # They're Bill's Friends
 ```
-
+> * str.zfill(width) 返回左侧填充了ASCII '0'使其长度为width的字符串副本
 
 
 
