@@ -168,6 +168,14 @@ re模块提供正则表达式来匹配操作类似于Perl，模式字符与字�
         <td>$</td>
         <td>匹配结尾字符,'foo'能匹配‘foo’和‘foobar’,如果使用<b>foo$</b>则只能匹配‘foo’</td>
     </tr>
+    <tr>
+        <td>*</td>
+        <td>匹配0或者多个字符，ab*将匹配‘a’，‘ab’或者‘ab...b’任意个b的字符串</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
