@@ -129,7 +129,7 @@ comment_string.strip('#.') #Section 3.2.1 Issue #32'
 'ab c\n\nde fg\rkl\r\n'.splitlines() #['ab c','','de fg','kl']
 'ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True) #['ab c\n','\n','de fg\r','kl\r\n']
 ```
->> 和split()不同，当sep指定，split()将返回一个空列表，以下示例作为对比：
+> 和split()不同，当sep指定，split()将返回一个空列表，以下示例作为对比：
 ```py
 "".splitlines()  # []
 "One line\n".splitlines() #[’One line']
@@ -154,7 +154,73 @@ re模块提供正则表达式来匹配操作类似于Perl，模式字符与字�
 正则表达式使用下划线“\\”来指示特殊形式或者允许特殊字符才不会唤起其特殊意义表达。
 #### 正则表达式语法
 正则表达式就是描述一组字符匹配它，而函数则让你检查是否一组字符能匹配特定的正则式。
+> <table>
+    <tr>
+        <td>.</td>
+        <td>默认值，能匹配任何字符除了换行符，如果DOTALL为TRUE,则会匹配所有字符含换行符</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
 
+</table>
 
 
 
