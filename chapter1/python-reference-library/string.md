@@ -150,6 +150,9 @@ titlecase("they're bill's friends.") # They're Bill's Friends
 
 # re - Regular Expression Operations
 
+re模块提供正则表达式来匹配操作类似于Perl，模式字符与字符均可使用Unicode和8位字符，当然两者不能混合，原因不能通过byte类型数据来匹配Unicode编码数据，正如替代字符操作时，被替代的数据与替代数据的类型需一致才行。
+正则表达式使用下划线“\\”来指示特殊形式或者允许特殊字符才不会唤起其特殊意义表达。
+#### 正则表达式语法
 
 
 
