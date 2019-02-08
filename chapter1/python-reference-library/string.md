@@ -156,16 +156,16 @@ re模块提供正则表达式来匹配操作类似于Perl，模式字符与字�
 正则表达式就是描述一组字符匹配它，而函数则让你检查是否一组字符能匹配特定的正则式。
 > <table>
     <tr>
-        <td>.</td>
+        <td>.(Dot)</td>
         <td>默认值，能匹配任何字符除了换行符，如果DOTALL为TRUE,则会匹配所有字符含换行符</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>^(Caret)</td>
+        <td>匹配开始字符，在MULTILINE模式也会匹配每行</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>$</td>
+        <td>匹配结尾字符,'foo'能匹配‘foo’和‘foobar’,如果使用<b>foo$</b>则只能匹配‘foo’</td>
     </tr>
     <tr>
         <td></td>
