@@ -148,6 +148,7 @@ titlecase("they're bill's friends.") # They're Bill's Friends
 ```
 > * str.zfill(width) 返回左侧填充了ASCII '0'使其长度为width的字符串副本
 
+# re - Regular Expression Operations
 
 
 
