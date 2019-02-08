@@ -165,7 +165,7 @@ re模块提供正则表达式来匹配操作类似于Perl，模式字符与字�
     </tr>
     <tr>
         <td>$</td>
-        <td>匹配结尾字符,'foo'能匹配‘foo’和‘foobar’,如果使用<b bgcolor='blue'>foo$</b>则只能匹配‘foo’</td>
+        <td>匹配结尾字符,'foo'能匹配‘foo’和‘foobar’,如果使用<b style='bgcolor:blue'>foo$</b>则只能匹配‘foo’</td>
     </tr>
     <tr>
         <td></td>
